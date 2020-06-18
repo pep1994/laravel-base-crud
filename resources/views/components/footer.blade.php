@@ -1,3 +1,5 @@
 <footer>
-    <h2>I'm best footer</h2>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="">Omini</a>
+      </nav>
 </footer>

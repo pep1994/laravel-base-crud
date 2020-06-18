@@ -1,16 +1,33 @@
-//
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body {
-    background-color: rgb(228, 228, 228);
-    header {
-        height: 50px;
-        background-color: darkgreen;
-    }
-    footer {
-        background-color: darkred;
-        height: 50px;
-    }
+
+header {
+    display: block;
 }
+
+main {
+    margin-top: 60px;
+    min-height: calc(100vh - 114px);
+}
+
+#up {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    display: none;
+   
+}
+
+
