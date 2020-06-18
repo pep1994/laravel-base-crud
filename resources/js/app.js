@@ -1,17 +1,14 @@
 require('./bootstrap');
 
 const targetUp = document.getElementById('up');
+let navHeight = document.querySelector('header').scrollHeight;
 
 window.addEventListener('scroll', () => {
-    // aletezza dell'intera pagina meno l'altezza della parte di finestra
-    let scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    // altezza che scrolla la finestra
     let scrolled = window.scrollY;
 
-    if (scrolled === scrollable) {
+    if (scrolled > navHeight + 200) {
         targetUp.style.display = 'block';
-    } 
-    if (scrolled === 0) {
+    } else {
         targetUp.style.display = 'none';
     }
   })

@@ -37228,17 +37228,13 @@ module.exports = function(module) {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 var targetUp = document.getElementById('up');
+var navHeight = document.querySelector('header').scrollHeight;
 window.addEventListener('scroll', function () {
-  // aletezza dell'intera pagina meno l'altezza della parte di finestra
-  var scrollable = document.documentElement.scrollHeight - window.innerHeight; // altezza che scrolla la finestra
-
   var scrolled = window.scrollY;
 
-  if (scrolled === scrollable) {
+  if (scrolled > navHeight + 200) {
     targetUp.style.display = 'block';
-  }
-
-  if (scrolled === 0) {
+  } else {
     targetUp.style.display = 'none';
   }
 });
