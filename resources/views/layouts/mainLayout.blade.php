@@ -21,7 +21,7 @@
 
         @include('components.footer')
 
+        @yield('script')
         
-        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

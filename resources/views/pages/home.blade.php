@@ -2,6 +2,11 @@
 
 @section('main-content')
     <div class="container">
+        @if (session('success'))
+            <div class="alert alert-success text-center" role="alert">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="row justify-content-center">
             @foreach ($omini as $omino)
                 @php
@@ -20,4 +25,8 @@
         <a id="up" type="button" class="btn btn-warning"><i class="fas fa-arrow-up" ></i></a>
    
     </div>
+@endsection
+
+@section('script')
+    <script src="{{ url('js/app.js') }}"></script>
 @endsection

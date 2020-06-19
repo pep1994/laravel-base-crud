@@ -2,6 +2,11 @@
 
 @section('main-content')
     <div class="container h-100">
+        @if (session('success'))
+            <div class="alert alert-success text-center" role="alert">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="row">
             <div class="col-sm text-center d-flex justify-content-center">
                 <div class="card" style="width: 40rem;">
